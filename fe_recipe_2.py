@@ -70,12 +70,3 @@ def historical_prices_naver(index_cd, page_n=1, start_date ='', end_date = '', l
 historical_prices = {}
 historical_prices_naver('020560', start_date='2019-01-01')
 
-a = []
-b = []
-
-for x in historical_prices:
-  a.append(x)
-  
-for x in historical_prices.values():
-  b.append(x)
-
