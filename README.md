@@ -3,4 +3,6 @@
 금융 데이터를 활용한 작업
 
 ## 20190415 
-> historical_data_naver.py 
+
+## 20190417
+> kinds.krx.co.kr에서 시장 데이터를 긁어오는 파일 제작
