@@ -24,7 +24,9 @@ def date_format(d):
   date = dt.date(y, m, d)
   return date
 
-def historical_prices_naver(index_cd, page_n=1, start_date ='', end_date = '', last_page=0):
+historical_prices = {}
+
+def prices_naver(index_cd, page_n=1, start_date ='', end_date = '', last_page=0):
   if start_date:
     start_date = date_format(start_date)
   else:
@@ -63,10 +65,6 @@ def historical_prices_naver(index_cd, page_n=1, start_date ='', end_date = '', l
       
   if page_n < last_page:
     page_n += 1
-    historical_prices_naver(index_cd, page_n, start_date, end_date, last_page)
+    prices_naver(index_cd, page_n, start_date, end_date, last_page)
   
   return historical_prices
-
-historical_prices = {}
-historical_prices_naver('020560', start_date='2019-01-01')
-
