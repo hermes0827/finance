@@ -26,11 +26,11 @@ def agg_value(index_cd):
     floating_stocks = re.sub('\s', '', floating_stocks[0])
     
     agg = float(agg.split('억원')[0].replace(',', ''))
-    floating_stocks = float(floating_stocks.split('/')[1].replace('%', ''))
+    floating_stock = float(floating_stocks.split('/')[1].replace('%', ''))
+    floating_ratio = floating_stocks.split('/')[0].replace('주', '')
+    floating_ratio = float(floating_ratio.replace(',', ''))
     
-    floating_ratio = agg*floating_stocks*0.01
-    
-    return agg, floating_stocks, floating_ratio
+    return agg, floating_stock, floating_ratio
 
 
 # In[392]:
