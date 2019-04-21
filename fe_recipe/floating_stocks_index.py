@@ -30,7 +30,7 @@ def agg_value(index_cd):
     
     floating_ratio = agg*floating_stocks*0.01
     
-    return floating_ratio
+    return agg, floating_stocks, floating_ratio
 
 
 # In[392]:
