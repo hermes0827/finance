@@ -70,17 +70,6 @@ def historical_index_daum(index_cd, page_n=1, start_date='', end_date='',last_pa
     if page_n < last_page:
         page_n += 1
         historical_index_daum(index_cd, page_n, start_date, end_date, last_page)
-
-
-# In[134]:
-
-
-data_collection = {}
-historical_index_daum('US.SP500', start_date='2019-01-01')
-
-
-# In[135]:
-
-
-data_collection
+        
+    return data_collection
 
