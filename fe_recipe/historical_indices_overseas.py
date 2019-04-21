@@ -27,6 +27,7 @@ def date_format(d):
 
 # In[130]:
 
+data_collection = {}
 
 def historical_index_daum(index_cd, page_n=1, start_date='', end_date='',last_page=0):
     if start_date:
