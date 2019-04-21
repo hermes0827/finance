@@ -64,14 +64,3 @@ def historical_index_naver(index_cd, page_n=1, start_date ='', end_date = '', la
     historical_index_naver(index_cd, page_n, start_date, end_date, last_page)
   
   return historical_prices
-
-historical_prices = {}
-kospi200 = historical_index_naver('KPI200', start_date='2019-01-01')
-
-type(kospi200)
-
-df = pd.DataFrame.from_dict(kospi200, orient='index', columns=['prices'])
-
-plt.figure(figsize=(10,5))
-plt.plot(df['prices'])
-
